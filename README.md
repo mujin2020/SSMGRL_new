@@ -14,9 +14,7 @@ pip install -r requirements.txt
 
 ## Preparation
 
-weights see >>>[here](SUGRL/checkpoints/)<<<.
-
-Configs see >>>[here](SUGRL/args.yaml)<<<.
+To train the model, unzip the dataset first.
 
 Dataset (`--dataset-class`, `--dataset-name`,`--Custom-key`)
 
