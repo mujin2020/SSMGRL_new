@@ -1,4 +1,4 @@
-# SUGRL: Simple Unsupervised Graph Representation Learning
+# S$^$MGRL: Simple Unsupervised Graph Representation Learning
 
 This repository contains the reference code for the paper Simple Self-supervised Multiplx Graph Representation Learning 
 
