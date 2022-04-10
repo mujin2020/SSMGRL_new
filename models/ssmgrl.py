@@ -49,8 +49,9 @@ class SSMGRL(embedder):
 
             loss.backward()
             optimiser.step()
-        torch.save(model.state_dict(), 'saved_model/best_{}_{}.pkl'.format(self.args.dataset,self.args.custom_key))
-        # model.load_state_dict(torch.load('saved_model/best_dblp.pkl'))
+        # torch.save(model.state_dict(), 'saved_model/best_{}_{}.pkl'.format(self.args.dataset,self.args.custom_key))
+        if self.args.use_pretrain:
+            model.load_state_dict(torch.load('saved_model/best_{}_{}.pkl'.format(self.args.dataset,self.args.custom_key)))
         print('loss', loss)
         print("Evaluating...")
         model.eval()
