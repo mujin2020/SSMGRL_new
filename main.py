@@ -17,6 +17,7 @@ def get_args(model_name, dataset, custom_key="", yaml_path=None) -> argparse.Nam
     parser.add_argument('--sparse', type=bool, default=True, help='sparse adjacency matrix')
     parser.add_argument('--sparse_adj', type=bool, default=False, help='sparse adjacency matrix')
     parser.add_argument('--iterater', type=int, default=10, help='iterater')
+    parser.add_argument('--use_pretrain', type=bool, default=True, help='use_pretrain')
     parser.add_argument('--nb_epochs', type=int, default=1500, help='the number of epochs')
     parser.add_argument('--lr', type=float, default=0.0005, help='learning rate')
     parser.add_argument('--weight_decay', type=float, default=0.0, help='weight decay')
@@ -68,7 +69,7 @@ def main():
     args = get_args(
         model_name="SSMGRL",
         dataset="dblp",
-        custom_key="Sim",  # Node: node classification  Clu: clustering   Sim: similarity
+        custom_key="Node",  # Node: node classification  Clu: clustering   Sim: similarity
     )
     if args.dataset == "imdb" or args.dataset == "acm" :
         args.length = 2
