@@ -16,11 +16,9 @@ pip install -r requirements.txt
 
 To train the model, unzip the dataset first.
 
-Dataset (`--dataset-class`, `--dataset-name`,`--Custom-key`)
-
 Important args:
-* `--pretrain` Test checkpoints
-* `--dataset-name` acm, imdb, dblp, freebase
+* `--use_pretrain` Test checkpoints
+* `--dataset` acm, imdb, dblp, freebase
 * `--custom_key` Node: node classification  Clu: clustering   Sim: similarity
 
 ## Training
